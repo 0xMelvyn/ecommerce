@@ -15,3 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+  function incrementer() {
+    var compteur = document.getElementById("compteur");
+    var valeur = parseInt(compteur.innerHTML);
+    compteur.innerHTML = valeur + 1;
+  }
+
+  function decrease() {
+    var compteur = document.getElementById("compteur");
+    var valeur = parseInt(compteur.innerHTML);
+    if (valeur > 1) {
+    compteur.innerHTML = valeur - 1;
+    }
+  }
