@@ -226,12 +226,6 @@ button {
     padding: 0;
   }
 
-  .logo {
-    position: absolute;
-    top: 13px;
-    left: 40px
-  }
-
   .user li {
     display: flex;
   }
@@ -329,5 +323,11 @@ button {
 
   .add p {
     margin: 0;
+  }
+
+  .logo {
+    position: absolute;
+    top: 13px;
+    left: 40px
   }
 }
