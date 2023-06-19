@@ -23,6 +23,10 @@ ul {
   justify-content: space-between;
 }
 
+.navbar li:first-child {
+  display: none;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -34,22 +38,26 @@ ul {
   justify-content: right;
 }
 
-.user li:first-child {
-  display: none;
-}
-
 i {
   font-size: 1.5rem;
+  transition: .5s ease;
 }
 
 i:hover {
   color: black;
+  transition: .5s ease;
 }
 
 .avatar img {
   width: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: .5s ease;
+}
+
+.avatar img:hover {
   border: 2px solid orange;
-  border-radius: 50% 50%;
+  transition: .5s ease;
 }
 
 li {
@@ -98,10 +106,12 @@ hr {
   width: 90px;
   border-radius: 5%;
   cursor: pointer;
+  transition: 1s ease;
 }
 
 .thumbnails img:hover {
   filter: grayscale(var(--value, 100%)); --value: 50%;
+  transition: 1s ease;
 }
 
 .landing_page {
@@ -188,6 +198,7 @@ button {
   color: white;
   border-radius: 5%;
   cursor: pointer;
+  transition: 1s ease;
 }
 
 .buy i:hover {
@@ -196,24 +207,37 @@ button {
 
 .buy:hover {
   background-color: orange;
+  transition: 1s ease;
 }
 
 /* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
 @media screen and (max-width: 1024px) {
   .navbar li {
-      display: none;
-  }
-
-  .navbar li:first-child {
-    display: flex;
-  }
-
-  .user li {
     display: none;
   }
 
-  .user li:first-child {
+  .navbar li:first-child,
+  .navbar li:nth-child(2) {
     display: flex;
+  }
+
+  .navbar a:hover {
+    border: none;
+    padding: 0;
+  }
+
+  .logo {
+    position: absolute;
+    top: 13px;
+    left: 40px
+  }
+
+  .user li {
+    display: flex;
+  }
+
+  .user img {
+    width: 30px;
   }
 }
 
