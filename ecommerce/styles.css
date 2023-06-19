@@ -1,0 +1,309 @@
+/* Reset styles */
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+/* General styles */
+body {
+  background-color: white;
+  font-size: 16px;
+  font-family: Kumbh Sans, sans-serif;
+}
+
+/* Navbar */
+.logo {
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.user li:first-child {
+  display: none;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+i:hover {
+  color: black;
+}
+
+.avatar img {
+  width: 2.5rem;
+  border: 2px solid orange;
+  border-radius: 50% 50%;
+}
+
+li {
+  color: gray;
+  list-style-type: none;
+  padding: 1rem;
+}
+
+a {
+  color: inherit;
+}
+
+.navbar a:hover {
+  color: black;
+  padding-bottom: 2.7rem;
+  border-bottom: 4px solid hsl(26, 100%, 55%);
+}
+
+.logo a:hover {
+  padding-bottom: 2rem;
+}
+
+/* Product page */
+hr {
+  width: 95%;
+}
+
+.container {
+  width: 400px;
+}
+
+.product img {
+  width: 400px;
+  margin-top: 3.5rem;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.thumbnails {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.thumbnails img {
+  width: 90px;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.thumbnails img:hover {
+  filter: grayscale(var(--value, 100%)); --value: 50%;
+}
+
+.landing_page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.detail {
+  width: 30%;
+  display: flexbox;
+}
+
+h6 {
+  color: orange;
+  font-size: 0.9rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+p {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.wpromo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wpromo h4 {
+  color: orange;
+  background-color: hsl(25, 100%, 94%);
+  border: 4px solid hsl(25, 100%, 94%);
+  border-radius: 10%;
+}
+
+.cross h6 {
+  color: gray;
+  font-size: 0.8rem;
+  text-decoration: line-through
+}
+
+.cartquantity {
+  display: flex;
+  gap: 3rem;
+}
+
+.add {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 10rem;
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 5%;
+}
+
+button {
+  color: orange;
+  background-color: hsl(223, 64%, 98%);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.add button:first-child {
+  padding-bottom: 3px;
+}
+
+.add p {
+  font-size: 15px;
+}
+
+.buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(26, 100%, 55%);
+  width: 220px;
+  font-size: 15px;
+  color: white;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.buy i:hover {
+  color: inherit;
+}
+
+.buy:hover {
+  background-color: orange;
+}
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+@media screen and (max-width: 1024px) {
+  .navbar li {
+      display: none;
+  }
+
+  .navbar li:first-child {
+    display: flex;
+  }
+
+  .user li {
+    display: none;
+  }
+
+  .user li:first-child {
+    display: flex;
+  }
+}
+
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+@media screen and (max-width: 600px) {
+  .landing_page {
+    flex-direction: column;
+    width: auto;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    padding: 0;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .product img {
+    border-radius: 0px;
+    margin: 0;
+  }
+
+  .detail {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .detail h6 {
+    font-size: 1.1rem;
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  .detail h2 {
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  .detail p {
+    font-size: 1.05rem;
+    line-height: 1.45rem;
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  .wpromo {
+    width: min-content;
+  }
+
+  .wpromo h3 {
+    font-size: 2rem;
+  }
+
+  .wpromo h4 {
+    font-size: 1rem;
+  }
+
+  .cross {
+    width: 50%;
+  }
+
+  .cross h6 {
+    margin: 0;
+    text-align: end;
+  }
+
+  .cprice {
+    display: flex;
+    align-items: center;
+  }
+
+  .cartquantity {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .add,
+  .buy {
+    width: 95%;
+    border-radius: 10px;
+    height: 3.5rem;
+  }
+
+  .add p {
+    margin: 0;
+  }
+}
