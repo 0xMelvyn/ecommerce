@@ -34,6 +34,10 @@ ul {
   justify-content: right;
 }
 
+.user li:first-child {
+  display: none;
+}
+
 i {
   font-size: 1.5rem;
 }
@@ -188,4 +192,55 @@ button {
 
 .buy:hover {
   background-color: orange;
+}
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+@media screen and (max-width: 1024px) {
+  .navbar li {
+      display: none;
+  }
+
+  .navbar li:first-child {
+    display: flex;
+  }
+
+  .user li {
+    display: none;
+  }
+
+  .user li:first-child {
+    display: flex;
+  }
+}
+
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+@media screen and (max-width: 600px) {
+  .landing_page {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .product img {
+    border-radius: 0px;
+  }
+
+  .detail {
+    flex-direction: column;
+    width: auto;
+    text-align: center;
+  }
+
+  .wpromo {
+    justify-content: center;
+  }
+
+  .cross {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cartquantity {
+    flex-direction: column;
+    align-items: center;
+  }
 }
